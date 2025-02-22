@@ -17,26 +17,26 @@ st.image('app.png')
 
 st.markdown('#### we provide following information ')
 
-st.markdown("#### :one: 📊 Stock Information")  
+st.markdown("#### :one: Stock Information")  
 st.write(  
     "Get real-time stock details, historical performance, and key indicators. "
     "Explore company trends, market fluctuations, and price movements to make informed investment decisions."
 )
 
-st.markdown("#### :two: 🔮 Stock Prediction")  
+st.markdown("#### :two:  Stock Prediction")  
 st.write(  
     "Using advanced forecasting models, predict the closing prices for the next 30 days based on historical data. "
     "Analyze future trends and volatility to stay ahead in the market. "
     "Make data-driven investment decisions with our AI-powered predictions!"
 )
 
-st.markdown("#### :three: 📅 Interactive Visualizations")  
+st.markdown("#### :three:  Interactive Visualizations")  
 st.write(  
     "Visualize stock trends with interactive charts, historical comparisons, and key metrics. "
     "Use intuitive graphs and data-driven insights to understand stock performance better."
 )
 
-st.markdown("#### :four: ⚡ How It Works")  
+st.markdown("#### :four:  How It Works")  
 st.write(  
     "1. **Choose a Page Based on Your Needs:** \n"
     "   - Go to the **Stock Analysis** page to explore historical trends and key indicators. \n"
