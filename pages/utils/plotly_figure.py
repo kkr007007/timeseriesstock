@@ -3,8 +3,29 @@ import pandas as pd
 import datetime
 import dateutil.relativedelta
 import plotly.graph_objects as go
-import pandas_ta as pta
 from matplotlib.pyplot import margins, legend
+
+
+def rsi(series, period=14):
+    delta = series.diff()
+    gain = (delta.where(delta > 0, 0)).rolling(window=period, min_periods=1).mean()
+    loss = (-delta.where(delta < 0, 0)).rolling(window=period, min_periods=1).mean()
+    rs = gain / loss
+    return 100 - (100 / (1 + rs))
+
+def sma(series, period):
+    return series.rolling(window=period).mean()
+
+def macd (series, short=12, long=26, signal=9):
+    short_ema = series.ewm(span=short, adjust=False).mean()
+    long_ema = series.ewm(span=long, adjust=False).mean()
+    macd_line = short_ema - long_ema
+    signal_line = macd_line.ewm(span=signal, adjust=False).mean()
+    macd_hist = macd_line - signal_line
+    return macd_line, signal_line, macd_hist
+
+
+
 
 def plotly_table(dataframe):
     headerColor = 'grey'
@@ -86,7 +107,7 @@ def candlestick(dataframe, num_period):
 
 
 def RSI(dataframe, num_period):
-    dataframe['RSI'] = pta.rsi(dataframe['Close'])
+    dataframe['RSI'] =rsi(dataframe['Close'])
     dataframe = filter_data(dataframe, num_period)
 
     fig = go.Figure()
@@ -103,7 +124,7 @@ def RSI(dataframe, num_period):
 
 
 def Moving_Average(dataframe, num_period):
-    dataframe['SMA_50'] = pta.sma(dataframe['Close'], 50)
+    dataframe['SMA_50'] = sma(dataframe['Close'], 50)
     dataframe = filter_data(dataframe, num_period)
 
     fig = go.Figure()
@@ -116,12 +137,8 @@ def Moving_Average(dataframe, num_period):
     return fig
 
 
-def MACD (dataframe, num_period):
-    macd = pta.macd(dataframe['Close'])
-    dataframe['MACD'] = macd.iloc[:, 0]
-    dataframe['MACD Signal'] = macd.iloc[:, 1]
-    dataframe['MACD Hist'] = macd.iloc[:, 2]
-
+def MACD(dataframe, num_period):
+    dataframe['MACD'], dataframe['MACD Signal'], dataframe['MACD Hist'] = macd(dataframe['Close'])
     dataframe = filter_data(dataframe, num_period)
 
     fig = go.Figure()
