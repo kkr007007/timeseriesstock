@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+yfinance
+plotly
+statsmodels
+scikit-learn
+matplotlib
+pandas_ta
+datetime
