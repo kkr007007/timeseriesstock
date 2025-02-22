@@ -10,7 +10,7 @@ page_title='Trading App',
     page_icon='chart_with_upwards_trend:',
     layout='wide'
 )
-st.title('Stock Prediction Using Statistical Model')
+st.title('Stock Prediction Using ARIMA Model')
 col1,col2,col3=st.columns(3)
 
 with col1:
