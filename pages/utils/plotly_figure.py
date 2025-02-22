@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 import pandas_ta as pta
 from matplotlib.pyplot import margins, legend
 
-
+npNaN = np.nan
 def plotly_table(dataframe):
     headerColor = 'grey'
     rowEvenColor = '#f8fafd'
