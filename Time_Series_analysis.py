@@ -17,14 +17,33 @@ st.image('app.png')
 
 st.markdown('#### we provide following information ')
 
-st.markdown('#### :one: Stock Information')
-st.write('Through this page, you can see all the information about stocks.')
+st.markdown("#### :one: 📊 Stock Information")  
+st.write(  
+    "Get real-time stock details, historical performance, and key indicators. "
+    "Explore company trends, market fluctuations, and price movements to make informed investment decisions."
+)
 
-st.markdown("#### :two: Stock prediction")
-st.write('You can explore predicted closing price for nexxt 30 days based on historical data and advance forecasting model. Use this tool to gain valuable insights into market trend and make informed investment Decisions')
+st.markdown("#### :two: 🔮 Stock Prediction")  
+st.write(  
+    "Using advanced forecasting models, predict the closing prices for the next 30 days based on historical data. "
+    "Analyze future trends and volatility to stay ahead in the market. "
+    "Make data-driven investment decisions with our AI-powered predictions!"
+)
 
-st.markdown('#### :three: CAPM Returns')
-st.write(' Discover how the capital asset pricing model (CAPM) calculates the expected return of different stock asset')
+st.markdown("#### :three: 📅 Interactive Visualizations")  
+st.write(  
+    "Visualize stock trends with interactive charts, historical comparisons, and key metrics. "
+    "Use intuitive graphs and data-driven insights to understand stock performance better."
+)
 
-st.markdown('#### :four: CAPM Beta')
-st.write('calculates beta and expected returns for individual stocks')
+st.markdown("#### :four: ⚡ How It Works")  
+st.write(  
+    "1. **Choose a Page Based on Your Needs:** \n"
+    "   - Go to the **Stock Analysis** page to explore historical trends and key indicators. \n"
+    "   - Go to the **Stock Prediction** page to forecast stock prices for the next 30 days. \n\n"
+    "2. **Enter a Stock Ticker:** Select a stock from the available US-listed companies. \n\n"
+    "3. **Explore Insights:** \n"
+    "   - On the **Stock Analysis** page, view price trends, historical data, and key market insights. \n"
+    "   - On the **Stock Prediction** page, generate AI-powered forecasts for future stock prices. \n\n"
+    "4. **Make Informed Decisions:** Use interactive charts and insights to enhance your investment strategy."
+)
