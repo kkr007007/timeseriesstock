@@ -1,7 +1,7 @@
 streamlit
 pandas
 numpy
-yfinance>=0.2.57 
+yfinance>=0.2.36
 plotly
 statsmodels
 scikit-learn
